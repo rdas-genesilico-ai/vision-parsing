@@ -79,7 +79,7 @@ def generate_text(image_path: str, offline: bool = False, ollama_model: str = "g
         ChatMessage(
             role="user",
             blocks=[
-                TextBlock(text="Perform OCR and extract all text from this document."),
+                TextBlock(text="Perform OCR and extract all text from this document. Return as a json."),
                 ImageBlock(path=image_path),
             ],
         ),
